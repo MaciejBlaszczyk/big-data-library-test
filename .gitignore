@@ -1,2 +1,10 @@
-*.class
-*.log
+.gradle
+**/build/
+!src/**/build/
+.idea/
+
+gradle-app.setting 					# Ignore Gradle GUI config
+!gradle-wrapper.jar					# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.properties 				# Avoid ignore Gradle wrappper properties
+.gradletasknamecache					# Cache of project
+build							# Ignore Gradle build output directory
