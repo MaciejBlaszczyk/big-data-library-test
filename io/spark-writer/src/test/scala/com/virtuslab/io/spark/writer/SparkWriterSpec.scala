@@ -35,6 +35,7 @@ class SparkWriterSpec
   override protected def afterAll(): Unit = {}
 
   it should "save data with one small and one big partition as 1 file for small partition and 9 files for big partition" in {
+    val aa=5
     val tableIdentifier = TableIdentifier(tableName, Some(dbName))
     val fileProps =
       FileProperties(fileFormat = FileFormat.Parquet, compressionRatio = 1, averageTargetBytes = 128 * 1000)
