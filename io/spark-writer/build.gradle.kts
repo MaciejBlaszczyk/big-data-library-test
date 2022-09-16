@@ -9,9 +9,7 @@ group = "com.mb.io"
 version = "0.0.2"
 
 repositories {
-    mavenCentral {
-        isAllowInsecureProtocol = true
-    }
+    mavenCentral()
 }
 
 dependencies {
@@ -25,6 +23,11 @@ dependencies {
     implementation("io.circe:circe-parser_2.12:0.9.3")
     testImplementation("org.pegdown:pegdown:1.6.0")
     testImplementation("org.scalatest:scalatest_2.12:3.0.5")
+}
+
+java {
+    withSourcesJar()
+    withJavadocJar()
 }
 
 publishing {
