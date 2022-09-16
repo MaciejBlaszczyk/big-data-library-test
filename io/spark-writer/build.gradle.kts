@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "com.mb.io"
-version = "0.0.2"
+version = "0.0.3"
 
 repositories {
     mavenCentral()
@@ -35,7 +35,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "com.mb.io"
             artifactId = "spark-writer"
-            version = "0.0.2"
+            version = "0.0.3"
             from(components["java"])
         }
     }
