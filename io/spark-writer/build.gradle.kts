@@ -6,10 +6,12 @@ plugins {
 }
 
 group = "com.mb.io"
-version = "0.0.1"
+version = "0.0.2"
 
 repositories {
-    mavenCentral()
+    mavenCentral {
+        isAllowInsecureProtocol = true
+    }
 }
 
 dependencies {
@@ -30,7 +32,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "com.mb.io"
             artifactId = "spark-writer"
-            version = "0.0.1"
+            version = "0.0.2"
             from(components["java"])
         }
     }
